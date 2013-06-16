@@ -42,7 +42,7 @@ class ArffReadException(Exception):
 
 # Class representing a simple attribute from an arff file
 class Attribute:
-    def __init__(self, name, isNumeric, possibleValues=[]):
+    vdef __init__(self, name, isNumeric, possibleValues=[]):
         self.isNumeric = isNumeric
         self.name = name
         self.possibleValues = possibleValues
@@ -102,7 +102,6 @@ def dataFromArffFile(fileHandler):
 
             sys.stderr.write(str(e))
 
-    #TODO make these constant strings
     fileInfo = {ARFF_DICT_RELATION_KEY: relation, ARFF_DICT_ATTRIBUTES_KEY: attributes,
                 ARFF_DICT_DATA_KEY: data}
 
