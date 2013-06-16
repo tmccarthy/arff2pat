@@ -42,7 +42,7 @@ class ArffReadException(Exception):
 
 # Class representing a simple attribute from an arff file
 class Attribute:
-    vdef __init__(self, name, isNumeric, possibleValues=[]):
+    def __init__(self, name, isNumeric, possibleValues=[]):
         self.isNumeric = isNumeric
         self.name = name
         self.possibleValues = possibleValues
